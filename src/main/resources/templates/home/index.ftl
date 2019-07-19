@@ -193,7 +193,7 @@
 
             $.ajax({
                 type:"GET",
-                url:"/reception/index",
+                url:"/reception/scenicpzx",
                 async:false,
                 dataType:"html",
                 success:function (data) {

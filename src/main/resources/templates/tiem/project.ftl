@@ -71,9 +71,14 @@
 						<script type="text/javascript" src="js/payfor.js"></script>
 						<div class="add_chose">
 							<label>数量：</label>
-                            <a class="DisDe" href="javascript:orderInserDtelete()"><i>-</i></a>
+                            <#--<a class="DisDe" href="javascript:orderInserDtelete()"><i>-</i></a>
                             <input class="Amount" value="1" onblur="orderchange()" autocomplete="off" id="orderUpdate" maxlength="100">
-                            <a class="Increase" href="javascript:orderInsertCount()"><i>+</i></a></br>
+                            <a class="Increase" href="javascript:orderInsertCount()"><i>+</i></a>-->
+
+
+                            <a class="reduce"   href="javascript:orderInserDtelete()">-</a>
+                            <input type="text"  value="1" onblur="orderchange()" autocomplete="off" id="orderUpdate" maxlength="100" class="text" />
+                            <a class="add" href="javascript:orderInsertCount()">+</a></br>
 							<span>库存：1500件</span>
 							<div class="clear"></div>
 						</div>
