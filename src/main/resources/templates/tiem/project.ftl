@@ -71,9 +71,9 @@
 						<script type="text/javascript" src="js/payfor.js"></script>
 						<div class="add_chose">
 							<label>数量：</label>
-							<a class="reduce" onClick="setAmount.reduce('#qty_item_1')" href="javascript:void(0)">-</a>
-							<input type="text" name="qty_item_1" value="1" id="qty_item_1" onKeyUp="setAmount.modify('#qty_item_1')" class="text" />
-							<a class="add" onClick="setAmount.add('#qty_item_1')" href="javascript:void(0)">+</a>
+                            <a class="DisDe" href="javascript:orderInserDtelete()"><i>-</i></a>
+                            <input class="Amount" value="1" onblur="orderchange()" autocomplete="off" id="orderUpdate" maxlength="100">
+                            <a class="Increase" href="javascript:orderInsertCount()"><i>+</i></a></br>
 							<span>库存：1500件</span>
 							<div class="clear"></div>
 						</div>
@@ -207,8 +207,49 @@
 </div>
 <!-----------------产品主图特效---------------->
 <script type="text/javascript">
+    var order = $("#orderUpdate").val();
+    var order2=null;
+    var cou =0;
 
-
+    function orderchange() {
+        order2=$("#orderUpdate").val();
+        if(order<1||order2<1||order==null||order2==null){
+            $("#orderUpdate").attr({"value":1})
+            ++cou;
+        }else {
+            $("#orderUpdate").attr({"value":order2})
+            ++cou;
+        }
+    }
+    function orderInserDtelete() {
+        orderchange();
+        if(order>=1){
+            if(cou!=null){
+                if(order<1||order2<1||order==null||order2==null||order==1||order2==1){
+                    $("#orderUpdate").attr({"value":1})
+                    ++cou;
+                }else {
+                    --order2;
+                    $("#orderUpdate").attr({"value":this.order2})
+                }
+            }else {
+                --order;
+                $("#orderUpdate").attr({"value":this.order})
+            }
+        }
+    }
+    function orderInsertCount() {
+        orderchange();
+        if(order>=1) {
+            if (cou != null) {
+                ++order2;
+                $("#orderUpdate").attr({"value": this.order2})
+            } else {
+                ++order;
+                $("#orderUpdate").attr({"value": this.order})
+            }
+        }
+    }
 $(document).ready(function(){
 	// 图片上下滚动
 	var count = $("#imageMenu li").length - 5; /* 显示 6 个 li标签内容 */
