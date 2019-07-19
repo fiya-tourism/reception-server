@@ -193,7 +193,7 @@
 
             $.ajax({
                 type:"GET",
-                url:"/reception/scenicpzx",
+                url:"/reception/index",
                 async:false,
                 dataType:"html",
                 success:function (data) {
@@ -338,6 +338,7 @@
     }
 
     //游记展示页面
+<<<<<<< HEAD
     function notelist() {
         $("#banner").remove();
         $("#home").attr("class","");
@@ -348,6 +349,29 @@
         $("#h_project").remove();
         $("#h_note").remove();
 
+=======
+        function notelist() {
+            $("#banner").remove();
+            $("#home").attr("class","");
+            $("#scenicList").attr("class","");
+            $("#tiemId").attr("class","");
+            $("#note").attr("class","cur");
+            $("#h_scenic").remove();
+            $("#h_project").remove();
+            $("#h_note").remove();
+            var  s= $("#userindexdiv").remove();
+            if (s.length==1 || whereindex==1){
+                $.ajax({
+                    type:"GET",
+                    url:"/reception/anavigate",
+                    async:false,
+                    dataType:"html",
+                    success:function (data) {
+                        $("#activities_UlId").html(data);
+                    }
+                })
+            }
+>>>>>>> e56ee11d7423926af46c7ec99b2fc2ceda94ba66
             $.ajax({
                 type:"GET",
                 url:"/reception/notelist",
@@ -413,7 +437,8 @@
         $("#h_scenic").remove();
         $("#h_project").remove();
         $("#h_note").remove();
-        $.ajax({
+        location.href="/reception/userindex";
+        /*$.ajax({
             type:"GET",
             url:"/reception/userindex",
             async:false,
@@ -422,7 +447,7 @@
                 $("#conmpenr").after("<div id='userindexdiv'></div>");
                 $("#userindexdiv").html(data);
             }
-        })
+        })*/
     }
 
 </script>
