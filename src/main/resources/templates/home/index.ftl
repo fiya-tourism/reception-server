@@ -114,10 +114,7 @@
     </div>
 </div>
 <script>
-    var whereindex;
     $(function(){
-        whereindex =1;
-
         home();
     });
     //首页
@@ -133,19 +130,6 @@
         $("#scenicList").attr("class","");
         $("#note").attr("class","");
 
-        var  s= $("#userindexdiv").remove();
-        if (s.length==1 || whereindex==1){
-            $.ajax({
-                type:"GET",
-                url:"/reception/anavigate",
-                async:false,
-                dataType:"html",
-                success:function (data) {
-                    $("#activities_UlId").html(data);
-                }
-            })
-            whereindex =2;
-        }
         //游记
         $.ajax({
             type:"GET",
@@ -206,18 +190,7 @@
         $("#h_scenic").remove();
         $("#h_project").remove();
         $("#h_note").remove();
-        var  s= $("#userindexdiv").remove();
-        if (s.length==1 || whereindex==1){
-            $.ajax({
-                type:"GET",
-                url:"/reception/anavigate",
-                async:false,
-                dataType:"html",
-                success:function (data) {
-                    $("#activities_UlId").html(data);
-                }
-            })
-        }
+
             $.ajax({
                 type:"GET",
                 url:"/reception/scenicpzx",
@@ -322,18 +295,7 @@
         $("#h_project").remove();
         $("#h_note").remove();
         $("#userindexdiv").remove();
-        var  s= $("#userindexdiv").remove();
-        if (s.length==1 || whereindex==1){
-            $.ajax({
-                type:"GET",
-                url:"/reception/anavigate",
-                async:false,
-                dataType:"html",
-                success:function (data) {
-                    $("#activities_UlId").html(data);
-                }
-            })
-        }
+
             $.ajax({
                 type:"GET",
                 url:"/reception/tiemmall",
@@ -385,18 +347,7 @@
         $("#h_scenic").remove();
         $("#h_project").remove();
         $("#h_note").remove();
-        var  s= $("#userindexdiv").remove();
-        if (s.length==1 || whereindex==1){
-            $.ajax({
-                type:"GET",
-                url:"/reception/anavigate",
-                async:false,
-                dataType:"html",
-                success:function (data) {
-                    $("#activities_UlId").html(data);
-                }
-            })
-        }
+
             $.ajax({
                 type:"GET",
                 url:"/reception/notelist",

@@ -73,9 +73,10 @@
                         <div class="price" style="width:15%;"><label>￥80.9</label></div>
                         <div class="number" style="width:30%;">
                             <div class="Spinner">
-                                <a class="DisDe" href="javascript:void(0)"><i>-</i></a>
-                                <input class="Amount" value="1" autocomplete="off" maxlength="3">
-                                <a class="Increase" href="javascript:void(0)"><i>+</i></a>
+                                <a class="DisDe" href="javascript:orderInserDtelete()"><i>-</i></a>
+                               <input class="Amount" value="1" onblur="orderchange()" autocomplete="off" id="orderUpdate" maxlength="100">
+                                <a class="Increase" href="javascript:orderInsertCount()"><i>+</i></a></br>
+                                <span id="orderspan"></span>
                             </div>
                         </div>
 
@@ -203,5 +204,50 @@
     <p>河洛文化旅游发展有限公司 版权所有</p>
     <p>Copyright 2016 zgqygc.com All Rights Reserved | 豫ICP备10000000号　技术支持：闪迅</p>
 </div>
+    <script>
+        var order = $("#orderUpdate").val();
+        var order2=null;
+        var cou =0;
+
+        function orderchange() {
+            order2=$("#orderUpdate").val();
+            if(order<1||order2<1||order==null||order2==null){
+                $("#orderUpdate").attr({"value":1})
+                ++cou;
+            }else {
+                $("#orderUpdate").attr({"value":order2})
+                ++cou;
+            }
+        }
+        function orderInserDtelete() {
+            orderchange();
+                if(order>=1){
+                    if(cou!=null){
+                        if(order<1||order2<1||order==null||order2==null||order==1||order2==1){
+                            $("#orderUpdate").attr({"value":1})
+                            ++cou;
+                        }else {
+                            --order2;
+                            $("#orderUpdate").attr({"value":this.order2})
+                        }
+                    }else {
+                        --order;
+                        $("#orderUpdate").attr({"value":this.order})
+                    }
+                }
+        }
+        function orderInsertCount() {
+            orderchange();
+            if(order>=1) {
+                if (cou != null) {
+                    ++order2;
+                    $("#orderUpdate").attr({"value": this.order2})
+                } else {
+                    ++order;
+                    $("#orderUpdate").attr({"value": this.order})
+                }
+            }
+        }
+    </script>
 </body>
 </html>
