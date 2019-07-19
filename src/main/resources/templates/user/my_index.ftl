@@ -38,7 +38,7 @@
                 <div class="integral"><img src="/images/integral_ico.png"/>当前积分 609</div>
                 <ul class="nav_sort">
                     <li><a href="javascript:index()"><i class="i1"></i>我的主页</a></li>
-                    <li><a href="javascript:userinsertnote()"><i class="i2"></i>写游记</a></li>
+                    <li><a href="javascript:insertnote()"><i class="i2"></i>写游记</a></li>
                     <li><a href="javascript:selectnote()"><i class="i9"></i>我的游记</a></li>
                     <li><a href="javascript:usercollect()"><i class="i3"></i>我的收藏</a></li>
                     <li><a href="javascript:selectitem()"><i class="i4"></i>商品订单</a></li>
@@ -55,7 +55,7 @@
 <!-----------------快捷导航---------------->
 <div id="quick_nav">
     <a href="javascript:index()"><span class="ico1"><img src="/images/nav_ico1.png"/></span>个人主页</a>
-    <a href="javascript:userinsertnote()"><span class="ico2"><img src="/images/nav_ico2.png"/></span>发布游记</a>
+    <a href="javascript:insertnote()"><span class="ico2"><img src="/images/nav_ico2.png"/></span>发布游记</a>
     <a href="javascript:selectnote()"><span class="ico7"><img src="/images/nav_ico7.png"/></span>我的游记</a>
     <a href="javascript:usercollect()"><span class="ico3"><img src="/images/nav_ico3.png"/></span>我的收藏</a>
     <a href="javascript:selectitem()"><span class="ico4"><img src="/images/nav_ico4.png"/></span>商品订单</a>
