@@ -202,25 +202,25 @@
             })
     }
     //旅游详情页面
-    function scentByid() {
-        $("#banner").remove();
-        $("#home").attr("class","");
-        $("#tiemId").attr("class","");
-        $("#note").attr("class","");
-        $("#scenicList").attr("class","cur");
-        $("#h_scenic").remove();
-        $("#h_project").remove();
-        $("#h_note").remove();
-        $.ajax({
-            type:"GET",
-            url:"/reception/scenicById",
-            async:false,
-            dataType:"html",
-            success:function (data) {
-                $("#conmpenr").html(data);
-            }
-        })
-    }
+    // function scentByid() {
+    //     $("#banner").remove();
+    //     $("#home").attr("class","");
+    //     $("#tiemId").attr("class","");
+    //     $("#note").attr("class","");
+    //     $("#scenicList").attr("class","cur");
+    //     $("#h_scenic").remove();
+    //     $("#h_project").remove();
+    //     $("#h_note").remove();
+    //     $.ajax({
+    //         type:"GET",
+    //         url:"/reception/scenicById",
+    //         async:false,
+    //         dataType:"html",
+    //         success:function (data) {
+    //             $("#conmpenr").html(data);
+    //         }
+    //     })
+    // }
     //旅游活动页面
     function activitieslist() {
         $("#banner").remove();
@@ -425,6 +425,27 @@
         })*/
     }
 
+    //旅游详情页面
+    function scentByid(id) {
+        $("#banner").remove();
+        $("#home").attr("class","");
+        $("#tiemId").attr("class","");
+        $("#note").attr("class","");
+        $("#scenicList").attr("class","cur");
+        $("#h_scenic").remove();
+        $("#h_project").remove();
+        $("#h_note").remove();
+        $.ajax({
+            type:"GET",
+            url:"/spotcontroller/spotById",
+            async:false,
+            dataType:"html",
+            data:{"Id":id},
+            success:function (data) {
+                $("#conmpenr").html(data);
+            }
+        })
+    }
 </script>
 </body>
 </html>

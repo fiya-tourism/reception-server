@@ -1,3 +1,4 @@
+
 <!------------------景区版头-------------------->
 <div id="scenic_head" style="background:url(/images/2c90cca2458c651b01458c95cc0b000c.jpg) no-repeat center;background-size:100%;">
 	<div class="cw1200">
@@ -82,11 +83,8 @@
 				<!------------------景区介绍-------------------->
 				<div id="article">
 					<div class="con">
-						<p>千唐志斋博物馆为全国重点文物保护单位，国家“AAAA”级旅游景点，我国唯一的墓志铭博物馆，以珍藏唐及历代墓志石刻二千余件而闻名于世，故由章太炎题额“千唐志斋”。千唐志斋是研究唐代三百年文治武功和书法艺术的史料宝库，因其丰富的内涵被誉为“石刻唐书”、“唐书法演变史”等。     千唐志斋藏有历代书画大家郑板桥、董其昌、米芾、王铎及近人吴昌硕、于右任、康有为等所作书画石刻，皆为罕见艺术珍品。千唐志斋为我国唐史研究基地，中原旅游线上一颗明珠，是洛阳和新安对外开放的重要窗口，中外专家学者、书画艺术爱好者的必游之地。    与千唐志斋相毗邻的张钫故居，现为河南省重点文物保护单位，装修布展工程是县政府2011年重点旅游工程项目之一，布展工程现在已经完工，千唐志斋与张钫故居的地下通道工程预计9月底全部完工，“十一”正式对外开放。</p>
+						<p>${spots.conentisert}</p>
 					</div>
-					<div class="map">
-						<img style="max-width:100%;" src="/images/map.jpg"/>
-					</div>					
 				</div>
 			</div>
 			<!------------------公共盒子-------------------->
@@ -174,13 +172,13 @@
 				<!------------------在线预订-------------------->
 				<div id="online_book">
 					<ul>
-						<li>景区名称：<span>千唐志斋</span></li>
-						<li>电话咨询：<span>0379-65517799</span></li>
+						<li>景区名称：<span>${spots.spotsName}</span></li>
+						<li>电话咨询：<span>${spots.spotsPhone}</span></li>
 						<li>开放时间：<span>全年</span></li>
-						<li>详细地址：<span>洛阳市孟津县马屯镇</span></li>
-						<li>费用：<label>￥495</label></li>
+						<li>景点地址：<span>${spots.spotsAddress}</span></li>
+						<li>费用：<label>￥${spots.spotsPrice}</label></li>
 					</ul>
-					<a class="buy" href="javascript:scenicorder()">立即预订</a>
+					<a class="buy" href="submit_orders.html">立即预订</a>
 				</div>
 			</div>
 			<!------------------公共盒子-------------------->

@@ -71,6 +71,7 @@ public class ReceptionController {
         return URL_spots+"confirm_order2";
     }
 
+
     //商品展示
     @RequestMapping("tiemmall")
     public String tiemmall(){

@@ -4,12 +4,12 @@
     <title>确认订单</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!-------------jquery库-------------->
-  	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+  	<script type="text/javascript" src="/js/jquery-1.8.3.min.js"></script>
 	<!-------------Amazeui--------------->
-    <script type="text/javascript" src="js/amazeui.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/amazeui.css">
+    <script type="text/javascript" src="/js/amazeui.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/amazeui.css">
     <!------------核心样式-------------->
-    <link rel="stylesheet" type="text/css" href="css/user.css">    
+    <link rel="stylesheet" type="text/css" href="/css/user.css">
 </head>
 <body>
 
