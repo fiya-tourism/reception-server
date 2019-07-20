@@ -15,41 +15,17 @@
 					<div class="clear"></div>
 				</div>
 				<!------------------列表分类-------------------->
-				<div id="list_sort">
-					<ul>
-						<li><span>产品类型：</span><a class="cur" href="javascript:scenic_list()">旅游景区</a><a href="javascript:activitieslist()">旅游活动</a><div class="clear"></div></li>
-					</ul>
-				</div>
+			<#--</a><a href="javascript:activitieslist()">旅游活动</a>-->
+				<#--<div id="list_sort">-->
+					<#--<ul>-->
+						<#--<li><span>产品类型：</span><a class="cur" href="javascript:scenic_list()">旅游景区<div class="clear"></div></li>-->
+					<#--</ul>-->
+				<#--</div>-->
 				<!------------------景区列表-------------------->
-				<div id="scenic_list">
-					<ul>
-						<li>
-							<div class="pic"><a href="javascript:scentByid()"><img class="scale-effect" src="/images/y1.jpg"/></a></div>
-							<div class="con">
-								<h3><a href="javascript:scentByid()">孟津绮梦红提生态园</a></h3>
-								<p>首先要去的就是芙蓉楼，据说此处是唐朝诗人王昌龄游玩会客之所。在清朝时期，又是黔阳本地才子佳人聚集之地据说此处是唐朝诗人王昌龄游玩会客之所。据说此处是唐朝诗人王昌龄游玩会客之所。</p>
-							</div>
-							<div class="tip">
-								<img src="/images/leisure_ico.png"/>休闲
-							</div>
-							<div class="clear"></div>
-						</li>
-                        <li>
-                            <div class="pic"><a href="javascript:scentByid()"><img class="scale-effect" src="images/y1.jpg"/></a></div>
-                            <div class="con">
-                                <h3><a href="javascript:scentByid()">龙潭大峡谷</a></h3>
-                                <p>首先要去的就是芙蓉楼，据说此处是唐朝诗人王昌龄游玩会客之所。在清朝时期，又是黔阳本地才子佳人聚集之地据说此处是唐朝诗人王昌龄游玩会客之所。据说此处是唐朝诗人王昌龄游玩会客之所。</p>
-                            </div>
-                            <div class="tip">
-                                <img src="images/scenic_ico.png"/>景区
-                            </div>
-                            <div class="clear"></div>
-                        </li>
-					</ul>
-				</div>
+				<div id="selectSpotList"></div>
 			</div>
-	
 		</div>
+
 		<div class="w380 fr">
 			<!------------------公共盒子-------------------->
 			<div class="public_box bg2">
@@ -175,3 +151,17 @@
 		<div class="clear"></div>
     </div>
 </div>
+<script>
+    $(function () {
+		$.ajax({
+			type:"GET",
+			url:"/spotcontroller/spotlist",
+			async:false,
+			success:function (data) {
+				$("#selectSpotList").html(data);
+            }
+		})
+    })
+
+
+</script>
