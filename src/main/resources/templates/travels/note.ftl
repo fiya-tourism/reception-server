@@ -47,16 +47,9 @@
 				<div id="article">
 	
 					<div class="con">
-						<p>日前，记者从市旅发委获悉，我市旅游资源规划开发质量等级评定委员会通过现场检查、达标审核、集体研究等程序，经公示无异议后，确定我市新安函谷关景区、伊川鹤鸣峡风景区、嵩县石头部落景区、东方红工业游景区4家景区为国家3A级旅游景区。</p>
-						<p>至此，我市国家A级旅游景区数量已增至45家。其中，国家5A级旅游景区5家，国家4A级旅游景区18家，国家3A级旅游景区17家，国家2A级旅游景区5家。</p>
-						<p>另悉，嵩县白云小镇景区也有望获批国家3A级旅游景区，目前正在公示(2月4日至9日)。待公示结束，我市国家A级旅游景区数量将达到46家。</p>
-						<img src="/images/10F118AC-FE28-4986-A6D0-B9E739F8CFDC.jpg"/>
-						<p>日前，记者从市旅发委获悉，我市旅游资源规划开发质量等级评定委员会通过现场检查、达标审核、集体研究等程序，经公示无异议后，确定我市新安函谷关景区、伊川鹤鸣峡风景区、嵩县石头部落景区、东方红工业游景区4家景区为国家3A级旅游景区。</p>
-						<img src="/images/1470142217075p1ap5krur5imd15qq1ims12ojghn2.jpg"/>
-						<p>至此，我市国家A级旅游景区数量已增至45家。其中，国家5A级旅游景区5家，国家4A级旅游景区18家，国家3A级旅游景区17家，国家2A级旅游景区5家。</p>
-						<p>另悉，嵩县白云小镇景区也有望获批国家3A级旅游景区，目前正在公示(2月4日至9日)。待公示结束，我市国家A级旅游景区数量将达到46家。</p>
-						<img src="/images/DD0E49BD-47F5-4B10-85DB-FE2390B91541.jpg"/>
-						<p>市旅发委产业促进科科长赵晖表示，我市国家3A级景区队伍的壮大，将进一步提升我市旅游业发展的核心竞争力，提高我市旅游产业经济效益，促进我市旅游业转型升级，为洛阳市发展全域旅游及创建国际文化旅游名城提供强大支撑。(金曦 林琳)(2月4日至9日)。待公示结束，我市国家A级旅游景区数量将达到46家。</p>
+
+						<p>${(sun.travelsPicture)!''}</p>
+
 					</div>
 				</div>
 			</div>
@@ -91,44 +84,8 @@
 									<p>非常好</p>
 									<span>发表于：2017-02-05 14:20</span>
 								</div>
-								<div class="tip"><span>5#</span></div>
 							</li>
-							<li>
-								<div class="pic"><img src="/images/head1.jpg"/></div>
-								<div class="con">
-									<label>A monologue. 独白。</label>
-									<p>非常好</p>
-									<span>发表于：2017-02-05 14:20</span>
-								</div>
-								<div class="tip"><span>4#</span></div>
-							</li>
-							<li>
-								<div class="pic"><img src="/images/head1.jpg"/></div>
-								<div class="con">
-									<label>A monologue. 独白。</label>
-									<p>非常好</p>
-									<span>发表于：2017-02-05 14:20</span>
-								</div>
-								<div class="tip"><span class="t_c t_box">地板</span></div>
-							</li>
-							<li>
-								<div class="pic"><img src="/images/head1.jpg"/></div>
-								<div class="con">
-									<label>A monologue. 独白。</label>
-									<p>非常好</p>
-									<span>发表于：2017-02-05 14:20</span>
-								</div>
-								<div class="tip"><span class="t_b t_box">板凳</span></div>
-							</li>
-							<li>
-								<div class="pic"><img src="/images/head1.jpg"/></div>
-								<div class="con">
-									<label>A monologue. 独白。</label>
-									<p>非常好</p>
-									<span>发表于：2017-02-05 14:20</span>
-								</div>
-								<div class="tip"><span class="t_a t_box">沙发</span></div>
-							</li>
+
 						</ul>
 					</div>
 				</div>

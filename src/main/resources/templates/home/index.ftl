@@ -52,17 +52,7 @@
 					</a>
 					<div class="user-bd">
 						<div class="integral"><img src="/images/integral_ico.png"/>当前积分 609</div>
-                        <ul class="nav_sort">
-                            <li><a href="javascript:userindex()"><i class="i1"></i>我的主页</a></li>
-                            <li><a href="javascript:insertnote()"><i class="i2"></i>写游记</a></li>
-                            <li><a href="javascript:selectnote()"><i class="i9"></i>我的游记</a></li>
-                            <li><a href="javascript:usercollect()"><i class="i3"></i>我的收藏</a></li>
-                            <li><a href="javascript:selectitem()"><i class="i4"></i>商品订单</a></li>
-                            <li><a href="javascript:userscenic_order()"><i class="i5"></i>旅游订单</a></li>
-                            <li><a href="javascript:usernote_comments()"><i class="i6"></i>我的评论</a></li>
-                            <li><a href="javascript:usermy_info()"><i class="i7"></i>设置</a></li>
-                            <li><a href="#"><i class="i8"></i>退出</a></li>
-                        </ul>
+                        <div id="activities_UlId"></div>
 					</div>
 				</div>
 				<span>|</span>
@@ -90,7 +80,7 @@
 						<option value="1">特产</option>
 						<option value="4">游记</option>
 						<option value="22">文章</option>
-					</select> 
+					</select>
 					<input class="inp_srh" name="keyboard"  placeholder="请输入您要搜索的关键词" >
 					<input class="btn_srh" type="submit" name="submit" value="搜索">
 				</form>
@@ -203,7 +193,7 @@
 
             $.ajax({
                 type:"GET",
-                url:"/reception/scenicpzx",
+                url:"/reception/index",
                 async:false,
                 dataType:"html",
                 success:function (data) {
@@ -348,19 +338,18 @@
     }
 
     //游记展示页面
-        function notelist() {
-            $("#banner").remove();
-            $("#home").attr("class","");
-            $("#scenicList").attr("class","");
-            $("#tiemId").attr("class","");
-            $("#note").attr("class","cur");
-            $("#h_scenic").remove();
-            $("#h_project").remove();
-            $("#h_note").remove();
-
+    function notelist() {
+        $("#banner").remove();
+        $("#home").attr("class","");
+        $("#scenicList").attr("class","");
+        $("#tiemId").attr("class","");
+        $("#note").attr("class","cur");
+        $("#h_scenic").remove();
+        $("#h_project").remove();
+        $("#h_note").remove();
             $.ajax({
                 type:"GET",
-                url:"/reception/notelist",
+                url:"/con/ask",
                 async:false,
                 dataType:"html",
                 success:function (data) {
@@ -368,7 +357,7 @@
                 }
             })
     }
-    //游记详情页面
+    /*//游记详情页面
     function noteById() {
         $("#banner").remove();
         $("#home").attr("class","");
@@ -388,7 +377,7 @@
                 $("#conmpenr").html(data);
             }
         })
-    }
+    }*/
     //写游记页面
     function insertnote() {
         $("#banner").remove();

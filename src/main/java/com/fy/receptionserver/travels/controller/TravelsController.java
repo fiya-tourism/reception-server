@@ -26,4 +26,13 @@ public class TravelsController {
         return mv;
     }
 
+    @RequestMapping("travelsById")
+    @ResponseBody
+    public ModelAndView travelsById(Integer travelsId){
+        ModelAndView mv = new ModelAndView("/travels/note");
+        Travel travel = travelsService.travelsById(travelsId);
+        mv.addObject("sun",travel);
+        return mv;
+    }
+
 }
