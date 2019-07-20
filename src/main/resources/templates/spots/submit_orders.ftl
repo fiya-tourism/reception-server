@@ -192,7 +192,7 @@
 
 
         <div class="calculation">
-            <a href="confirm_order2.html">提交订单</a>
+            <a href="javascript:toOrder()">提交订单</a>
             <span>合计（含运费0.00元）： <b>￥0.00</b></span>
 
         </div>
@@ -213,9 +213,14 @@
             order2=$("#orderUpdate").val();
             if(order<1||order2<1||order==null||order2==null){
                 $("#orderUpdate").attr({"value":1})
+                $("#orderspan").html("<span id='orderspan'></span>");
                 ++cou;
+            }else if (order>100||order2>100){
+                $("#orderUpdate").attr({"value":1})
+                alert("库存不足,请从新选择数量")
             }else {
                 $("#orderUpdate").attr({"value":order2})
+                $("#orderspan").html("<span id='orderspan'></span>");
                 ++cou;
             }
         }
@@ -241,12 +246,29 @@
             if(order>=1) {
                 if (cou != null) {
                     ++order2;
-                    $("#orderUpdate").attr({"value": this.order2})
-                } else {
+                    if (order2>100){
+                        $("#orderUpdate").attr({"value":1})
+                        alert("库存不足,请从新选择数量")
+                    }else {
+                        $("#orderUpdate").attr({"value": this.order2})
+                        $("#orderspan").html("<span id='orderspan'></span>");
+                    }
+                }else {
                     ++order;
-                    $("#orderUpdate").attr({"value": this.order})
+                    if (order>100){
+                        $("#orderUpdate").attr({"value":1})
+                        alert("库存不足,请从新选择数量")
+                    }else {
+                        $("#orderUpdate").attr({"value": this.order})
+                        $("#orderspan").html("<span id='orderspan'></span>");
+                    }
                 }
             }
+        }
+
+        //去确认订单页面
+        function toOrder() {
+            location.href="/reception/scenicordersubmit";
         }
     </script>
 </body>
