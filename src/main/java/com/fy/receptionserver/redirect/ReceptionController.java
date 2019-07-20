@@ -93,7 +93,7 @@ public class ReceptionController {
     public String tiemoreder(){
         return URL_tiem+"confirm_order";
     }
-    //游记页面
+   /* //游记页面
     @RequestMapping("notelist")
     public String notelist(){
         return URL_travels+"note_list";
@@ -102,7 +102,7 @@ public class ReceptionController {
     @RequestMapping("noteById")
     public String noteById(){
         return URL_travels+"note";
-    }
+    }*/
     //写游记页面
     @RequestMapping("insertnote")
     public String insertnote(){
