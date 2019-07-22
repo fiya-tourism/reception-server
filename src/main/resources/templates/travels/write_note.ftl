@@ -44,26 +44,60 @@
     <#--</div>-->
 <#--</div>-->
 <!-----------------发布封面---------------->
+<form id="youji">
 <div id="write_cover">
     <div class="replace_cover"><a href="#">更换封面</a></div>
-    <div class="replace_name"><div class="cw1000"><input type="text" placeholder="填写游记标题" maxlength="48" /></div></div>
+    <div class="replace_name"><div class="cw1000"><input type="text" name="travelsTitle" placeholder="填写游记标题" maxlength="48" /></div></div>
 </div>
 <!-----------------框架---------------->
-<div class="cw1000">
-    <img style="margin-top:30px;" src="/images/bjq.jpg"/>
+                <div id="editor" name="travelsText">
+                    <p>请您输入文字或图片都可以</p>
+                </div>
+
+
+                <button id="btn1">获取html</button>
+
+                <br/>
+
+            欢迎使用：<br/>
+
+                <div id="ttt"></div>
     <!-----------------发布按钮---------------->
     <div id="write_button">
         <a class="exit" href="#">退出</a>
-        <input class="express" type="submit" href="#" value="发表" />
+        <input class="express" type="button" href="javaScript:button()" value="发表" />
         <span>或</span>
         <input class="save" type="submit" href="#" value="保存草稿" />
         <div class="clear"></div>
     </div>
 </div>
+</form>
 <!-----------------版底---------------->
 <#--<div id="footer">-->
     <#--<p>河洛文化旅游发展有限公司 版权所有</p>-->
     <#--<p>Copyright 2016 zgqygc.com All Rights Reserved | 豫ICP备10000000号　技术支持：闪迅</p>-->
 <#--</div>-->
+<!-- 注意， 只需要引用 JS，无需引用任何 CSS ！！！-->
+<script type="text/javascript" src="/js/wangEditor.min.js"></script>
+<script type="text/javascript">
+    var E = window.wangEditor
+
+    var editor = new E('#editor')
+    editor.customConfig.uploadImgShowBase64 = true   // 使用 base64 保存图片
+
+    editor.create();
+
+
+    document.getElementById('btn1').addEventListener('click', function () {
+        // 读取 html
+        alert(editor.txt.html());
+
+        document.getElementById("ttt").innerHTML=editor.txt.html();
+    }, false)
+function button() {
+
+
+}
+</script>
 </body>
 </html>

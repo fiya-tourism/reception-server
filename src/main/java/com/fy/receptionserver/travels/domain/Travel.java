@@ -14,17 +14,14 @@ public class Travel implements Serializable {
     private String travelsContentId;
 
     private String travelsTitle;
-
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date travelsRelease;
 
     private String travelsPicture;
-
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date travelsCreate;
-
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date travelsUpdate;
@@ -111,21 +108,5 @@ public class Travel implements Serializable {
 
     public void setTravelsText(String travelsText) {
         this.travelsText = travelsText;
-    }
-
-    @Override
-    public String toString() {
-        return "Travel{" +
-                "travelsId=" + travelsId +
-                ", travelsUserId=" + travelsUserId +
-                ", travelsContentId='" + travelsContentId + '\'' +
-                ", travelsTitle='" + travelsTitle + '\'' +
-                ", travelsRelease=" + travelsRelease +
-                ", travelsPicture='" + travelsPicture + '\'' +
-                ", travelsCreate=" + travelsCreate +
-                ", travelsUpdate=" + travelsUpdate +
-                ", travelsYn=" + travelsYn +
-                ", travelsText='" + travelsText + '\'' +
-                '}';
     }
 }

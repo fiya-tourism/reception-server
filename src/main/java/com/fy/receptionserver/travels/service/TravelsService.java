@@ -2,10 +2,7 @@ package com.fy.receptionserver.travels.service;
 
 import com.fy.receptionserver.travels.domain.Travel;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -17,4 +14,7 @@ public interface TravelsService {
 
     @RequestMapping("travels/upTravelById")
     public Travel travelsById(@RequestParam("travelsId") Integer travelsId);
+
+    @RequestMapping("travels/insertTravels")
+    public Integer insertInIt(@RequestBody Travel travel);
 }

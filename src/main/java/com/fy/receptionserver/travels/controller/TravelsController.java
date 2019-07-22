@@ -34,5 +34,14 @@ public class TravelsController {
         mv.addObject("sun",travel);
         return mv;
     }
+    @RequestMapping("insertInIt")
+    @ResponseBody
+    public Integer insertInIt(Travel travel){
+        Integer to = travelsService.insertInIt(travel);
+            if (to == 1){
+                return 1;
+            }
+            return 2;
+    }
 
 }
