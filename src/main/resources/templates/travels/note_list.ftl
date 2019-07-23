@@ -22,7 +22,7 @@
                     <div class="box">
                         <div class="pic">
 
-                            <div class="cover"><a href="javascript:travels('${travel.travelsId}')"><img class="scale-effect " src="/images/1458530382234p1aebir9i21s4q2hiiso1ip6msf29.jpg"/></a></div>
+                            <div class="cover"><a href="javascript:travels('${travel.travelsId}')"><img class="scale-effect " src="${(travel.travelsPicture)!''}"/></a></div>
                             <div class="head"><img src="/images/head1.jpg"/></div>
                         </div>
                         <div class="meta">

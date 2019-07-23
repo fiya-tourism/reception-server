@@ -2,9 +2,9 @@
 <!------------------游记版头-------------------->
 <div id="note_head">
 	<div class="head">
-		<div class="banner"><img src="/images/DD0E49BD-47F5-4B10-85DB-FE2390B91541.jpg"/></div>
+		<div class="banner"><img src="${(sun.travelsPicture)!''}"/></div>
 		<div class="title">
-			<div class="cw1200"><p>孟津田间山野，一次放飞心灵的休闲体验...</p></div>
+			<div class="cw1200"><p>${(sun.travelsTitle)!''}</p></div>
 			<span><img src="/images/eye_ico.png"/>999+</span>
 		</div>
 	</div>
@@ -13,7 +13,7 @@
 			<div class="pic"><img src="/images/head1.jpg"/></div>
 			<div class="meta">
 				<label>作者：A monologue. 独白。</label>
-				<span>发布于：2017-02-02 00:25</span>
+				<span>发布于：${(sun.travelsCreate)?string("yyyy-MM-dd HH:mm:ss")}</span>
 			</div>
 			<div class="operation">
 				<a href="#">
@@ -48,7 +48,7 @@
 	
 					<div class="con">
 
-						<p>${(sun.travelsPicture)!''}</p>
+						<p>${(sun.travelsText)!''}</p>
 
 					</div>
 				</div>
