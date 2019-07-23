@@ -414,7 +414,7 @@ body{width:100%;min-width:1280px;}
 
 #item_info .yListr ul{border-bottom:1px solid #dcdcdc;margin-top:20px;}
 #item_info .yListr ul li{height:36px;margin-bottom:23px;}
-#item_info .yListr ul li span{color:#000000;font-size:14px;line-height:36px;display:inline-block;width:42px;padding-left:4px;}
+#item_info .yListr ul li span{color:#000000;font-size:14px;line-height:36px;display:inline-block;width:60px;padding-left:4px;}
 #item_info .yListr ul li em{cursor:pointer;color:#666666;font-size:14px;display:inline-block;padding:0 10px;font-style:normal;background:white;border:1px solid #dcdcdc;line-height:34px;height:34px;}
 #item_info .yListr ul li em.yListrclickem{line-height:32px;border:2px solid #e9630a;height:32px;position:relative;padding:0 9px;}
 #item_info .yListr ul li em.yListrclickem i{display:block;width:15px;height:14px;background:url(../images/righbt.png) no-repeat 0 0;right:-1px;bottom:-1px;position:absolute;}
