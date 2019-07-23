@@ -20,7 +20,7 @@
         <div class="logo"><a title="" href="/reception/index"><img alt="" src="/images/logo.jpg" /></a></div>
 		<!-------------------头部导航------------------->
 		<div class="head_title">
-			确认订单
+			提交订单
 		</div>
 		<!-------------------用户------------------->
 		<div class="user">

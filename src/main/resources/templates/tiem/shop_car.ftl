@@ -20,7 +20,7 @@
         <div class="logo"><a title="" href="/reception/index"><img alt="" src="/images/logo.jpg" /></a></div>
 		<!-------------------头部导航------------------->
 		<div class="head_title">
-			购物车
+			提交订单
 		</div>
 		<!-------------------用户------------------->
 		<div class="user">
@@ -68,99 +68,6 @@
 		</div>
 		<div class="list_box">
 			<ul>
-				<li>
-					<div class="con">
-						<div class="info" style="width:35%;">
-							<label class="am-checkbox" style="float:left;margin-right:15px;">
-								<input type="checkbox" id="checkbox_a2" class="chk_1"> 
-								<label for="checkbox_a2"></label>
-							</label>
-							<div class="pic"><a href="#"><img width=53 height=53 src="/images/t2.jpg" /></a></div>
-							<div class="name">
-								<a href="#">孟津特供香酥梨一斤</a>
-								<p>下单日期：2017-03-06</p>
-							</div>
-							<div class="clear"></div>
-						</div>
-						<div class="price" style="width:15%;"><label>￥80.9</label></div>
-						<div class="number" style="width:20%;">
-							<div class="Spinner">
-								<a class="DisDe" href="javascript:void(0)"><i>-</i></a>
-								<input class="Amount" value="1" autocomplete="off" maxlength="3">
-								<a class="Increase" href="javascript:void(0)"><i>+</i></a>
-							</div>
-						</div>
-						
-						<div class="price" style="width:15%;"><span>￥80.9</span></div>
-						
-						<div class="operation" style="width:15%;">
-							<a class="evaluation" href="#">删除</a>
-						</div>
-						<div class="clear"></div>
-					</div>
-				</li>
-				<li>
-					<div class="con">
-						<div class="info" style="width:35%;">
-							<label class="am-checkbox" style="float:left;margin-right:15px;">
-								<input type="checkbox" id="checkbox_a3" class="chk_1"> 
-								<label for="checkbox_a3"></label>
-							</label>
-							<div class="pic"><a href="#"><img width=53 height=53 src="/images/t3.jpg" /></a></div>
-							<div class="name">
-								<a href="#">孟津特供奶葡萄三斤</a>
-								<p>下单日期：2017-03-06</p>
-							</div>
-							<div class="clear"></div>
-						</div>
-						<div class="price" style="width:15%;"><label>￥80.9</label></div>
-						<div class="number" style="width:20%;">
-							<div class="Spinner">
-								<a class="DisDe" href="javascript:void(0)"><i>-</i></a>
-								<input class="Amount" value="1" autocomplete="off" maxlength="3">
-								<a class="Increase" href="javascript:void(0)"><i>+</i></a>
-							</div>
-						</div>
-						
-						<div class="price" style="width:15%;"><span>￥80.9</span></div>
-						
-						<div class="operation" style="width:15%;">
-							<a class="evaluation" href="#">删除</a>
-						</div>
-						<div class="clear"></div>
-					</div>
-				</li>
-				<li>
-					<div class="con">
-						<div class="info" style="width:35%;">
-							<label class="am-checkbox" style="float:left;margin-right:15px;">
-								<input type="checkbox" id="checkbox_a4" class="chk_1"> 
-								<label for="checkbox_a4"></label>
-							</label>
-							<div class="pic"><a href="#"><img width=53 height=53 src="/images/t2.jpg" /></a></div>
-							<div class="name">
-								<a href="#">孟津特供香酥梨一斤</a>
-								<p>下单日期：2017-03-06</p>
-							</div>
-							<div class="clear"></div>
-						</div>
-						<div class="price" style="width:15%;"><label>￥80.9</label></div>
-						<div class="number" style="width:20%;">
-							<div class="Spinner">
-								<a class="DisDe" href="javascript:void(0)"><i>-</i></a>
-								<input class="Amount" value="1" autocomplete="off" maxlength="3">
-								<a class="Increase" href="javascript:void(0)"><i>+</i></a>
-							</div>
-						</div>
-						
-						<div class="price" style="width:15%;"><span>￥80.9</span></div>
-						
-						<div class="operation" style="width:15%;">
-							<a class="evaluation" href="#">删除</a>
-						</div>
-						<div class="clear"></div>
-					</div>
-				</li>
 				<li>
 					<div class="con">
 						<div class="info" style="width:35%;">

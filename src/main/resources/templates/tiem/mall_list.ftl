@@ -17,169 +17,17 @@
                 <div id="list_sort">
                     <span>产品类型：</span>
                     <div class="list_1">
-                        <a class="cur" href="#">全部</a>
-                        <a href="#">农产品</a>
-                        <a href="#">水果</a>
-                        <a href="#">工艺品</a>
+                        <a class="cur" href="javascript:queryList(0)">全部</a>
+                        <a href="javascript:queryList(1)">农产品</a>
+                        <a href="javascript:queryList(2)">水果</a>
+                        <a href="javascript:queryList(3)">工艺品</a>
+                        <a href="javascript:queryList(4)">副产品</a>
                         <div class="clear"></div>
                     </div>
                 </div>
                 <!------------------特产列表-------------------->
                 <div id="mall_list">
-                    <ul>
-                        <li>
-                            <div class="pic"><a href="javascript:tiemById()"><img class="scale-effect" src="/images/t2.jpg"/></a></div>
-                            <div class="con">
-                                <h3><a href="javascript:tiemById()">秘鲁红提500g 葡萄 新鲜水果秘鲁红提500g 葡萄 新鲜水果</a></h3>
-                                <label>孟津绮梦红提生态园</label>
-                            </div>
-                            <div class="price">
-                                <p>￥<label>330</label></p>
-                                <span>运费: 5.00</span>
-                            </div>
-                            <div class="other">
-                                <span>76人付款</span>
-                                <a href="javascript:tiemById()">132条评论</a>
-                            </div>
-                            <div class="view">
-                                <a href="javascript:tiemById()">查看详情</a>
-                            </div>
-                            <div class="clear"></div>
-                        </li>
-                        <li>
-                            <div class="pic"><a href="article.html"><img class="scale-effect" src="/images/t2.jpg"/></a></div>
-                            <div class="con">
-                                <h3><a href="article.html">秘鲁红提500g 葡萄 新鲜水果秘鲁红提500g 葡萄 新鲜水果</a></h3>
-                                <label>孟津绮梦红提生态园</label>
-                            </div>
-                            <div class="price">
-                                <p>￥<label>330</label></p>
-                                <span>运费: 5.00</span>
-                            </div>
-                            <div class="other">
-                                <span>76人付款</span>
-                                <a href="javascript:tiemById()">132条评论</a>
-                            </div>
-                            <div class="view">
-                                <a href="javascript:tiemById()">查看详情</a>
-                            </div>
-                            <div class="clear"></div>
-                        </li>
-                        <li>
-                            <div class="pic"><a href="article.html"><img class="scale-effect" src="/images/t2.jpg"/></a></div>
-                            <div class="con">
-                                <h3><a href="article.html">秘鲁红提500g 葡萄 新鲜水果秘鲁红提500g 葡萄 新鲜水果</a></h3>
-                                <label>孟津绮梦红提生态园</label>
-                            </div>
-                            <div class="price">
-                                <p>￥<label>330</label></p>
-                                <span>运费: 5.00</span>
-                            </div>
-                            <div class="other">
-                                <span>76人付款</span>
-                                <a href="javascript:tiemById()">132条评论</a>
-                            </div>
-                            <div class="view">
-                                <a href="javascript:tiemById()">查看详情</a>
-                            </div>
-                            <div class="clear"></div>
-                        </li>
-                        <li>
-                            <div class="pic"><a href="article.html"><img class="scale-effect" src="/images/t2.jpg"/></a></div>
-                            <div class="con">
-                                <h3><a href="article.html">秘鲁红提500g 葡萄 新鲜水果秘鲁红提500g 葡萄 新鲜水果</a></h3>
-                                <label>孟津绮梦红提生态园</label>
-                            </div>
-                            <div class="price">
-                                <p>￥<label>330</label></p>
-                                <span>运费: 5.00</span>
-                            </div>
-                            <div class="other">
-                                <span>76人付款</span>
-                                <a href="javascript:tiemById()">132条评论</a>
-                            </div>
-                            <div class="view">
-                                <a href="javascript:tiemById()">查看详情</a>
-                            </div>
-                            <div class="clear"></div>
-                        </li>
-                        <li>
-                            <div class="pic"><a href="article.html"><img class="scale-effect" src="/images/t2.jpg"/></a></div>
-                            <div class="con">
-                                <h3><a href="article.html">秘鲁红提500g 葡萄 新鲜水果秘鲁红提500g 葡萄 新鲜水果</a></h3>
-                                <label>孟津绮梦红提生态园</label>
-                            </div>
-                            <div class="price">
-                                <p>￥<label>330</label></p>
-                                <span>运费: 5.00</span>
-                            </div>
-                            <div class="other">
-                                <span>76人付款</span>
-                                <a href="javascript:tiemById()">132条评论</a>
-                            </div>
-                            <div class="view">
-                                <a href="javascript:tiemById()">查看详情</a>
-                            </div>
-                            <div class="clear"></div>
-                        </li>
-                        <li>
-                            <div class="pic"><a href="article.html"><img class="scale-effect" src="/images/t2.jpg"/></a></div>
-                            <div class="con">
-                                <h3><a href="article.html">秘鲁红提500g 葡萄 新鲜水果秘鲁红提500g 葡萄 新鲜水果</a></h3>
-                                <label>孟津绮梦红提生态园</label>
-                            </div>
-                            <div class="price">
-                                <p>￥<label>330</label></p>
-                                <span>运费: 5.00</span>
-                            </div>
-                            <div class="other">
-                                <span>76人付款</span>
-                                <a href="javascript:tiemById()">132条评论</a>
-                            </div>
-                            <div class="view">
-                                <a href="javascript:tiemById()">查看详情</a>
-                            </div>
-                            <div class="clear"></div>
-                        </li>
-                        <li>
-                            <div class="pic"><a href="article.html"><img class="scale-effect" src="/images/t2.jpg"/></a></div>
-                            <div class="con">
-                                <h3><a href="article.html">秘鲁红提500g 葡萄 新鲜水果秘鲁红提500g 葡萄 新鲜水果</a></h3>
-                                <label>孟津绮梦红提生态园</label>
-                            </div>
-                            <div class="price">
-                                <p>￥<label>330</label></p>
-                                <span>运费: 5.00</span>
-                            </div>
-                            <div class="other">
-                                <span>76人付款</span>
-                                <a href="javascript:tiemById()">132条评论</a>
-                            </div>
-                            <div class="view">
-                                <a href="javascript:tiemById()">查看详情</a>
-                            </div>
-                            <div class="clear"></div>
-                        </li>
-                        <li>
-                            <div class="pic"><a href="article.html"><img class="scale-effect" src="/images/t2.jpg"/></a></div>
-                            <div class="con">
-                                <h3><a href="article.html">秘鲁红提500g 葡萄 新鲜水果秘鲁红提500g 葡萄 新鲜水果</a></h3>
-                                <label>孟津绮梦红提生态园</label>
-                            </div>
-                            <div class="price">
-                                <p>￥<label>330</label></p>
-                                <span>运费: 5.00</span>
-                            </div>
-                            <div class="other">
-                                <span>76人付款</span>
-                                <a href="javascript:tiemById()">132条评论</a>
-                            </div>
-                            <div class="view">
-                                <a href="javascript:tiemById()">查看详情</a>
-                            </div>
-                            <div class="clear"></div>
-                        </li>
-                    </ul>
+
                 </div>
 
             </div>
@@ -357,3 +205,33 @@
         <div class="clear"></div>
     </div>
 </div>
+<script>
+
+    //页面加载函数 商品列表展示
+    queryList(0)
+    function queryList(itemType){
+        $.ajax({
+            url:'/item/queryList',
+            type:'post',
+            dataType:'html',
+            data:{"itemType":itemType},
+            success:function (data) {
+                $("#mall_list").html(data);
+            }
+        });
+    }
+
+    //点击查看详情
+    function reShow(id){
+        $.ajax({
+            url:'/item/reShow',
+            type:'get',
+            dataType:'html',
+            data:{"itemId":id},
+            success:function (data) {
+                $("#sub_from").html(data);
+            }
+        });
+    }
+
+</script>
