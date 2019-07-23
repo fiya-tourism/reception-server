@@ -1,5 +1,6 @@
 package com.fy.receptionserver.user.service;
 
+import com.fy.receptionserver.commons.ResultMsg;
 import com.fy.receptionserver.site.domain.SiteVO;
 import com.fy.receptionserver.user.domain.UserVO;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -52,4 +54,17 @@ public interface UserService {
      */
     @RequestMapping(value="site/querySiteList",method = RequestMethod.GET)
     List<SiteVO> querySiteList(Integer siteId);
+
+
+
+
+    // 登录
+    @RequestMapping(value="login/toLogin",method = RequestMethod.GET)
+    ResultMsg toLogin(@RequestParam("userVO") String userVO);
+
+    @RequestMapping(value="login/checkPhone",method = RequestMethod.GET)
+    ResultMsg checkPhone(@RequestBody UserVO userVO);
+
+    @RequestMapping(value="login/register",method = RequestMethod.GET)
+    ResultMsg register(@RequestParam("userVO") String user);
 }
