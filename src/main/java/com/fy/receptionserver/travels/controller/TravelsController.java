@@ -45,7 +45,7 @@ public class TravelsController {
     public ModelAndView travelsById(Integer travelsId){
         ModelAndView mv = new ModelAndView("/travels/note");
         Travel travel = travelsService.travelsById(travelsId);
-        mv.addObject("sun",travel);
+        mv.addObject("travel",travel);
         return mv;
 
     }
