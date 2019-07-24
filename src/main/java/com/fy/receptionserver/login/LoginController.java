@@ -55,19 +55,19 @@ public class LoginController {
         //将session制空
         ResultMsg resultMsg1 =null;
         request.getSession().setAttribute("codeImg", null);
-             resultMsg1 = userService.toLogin(user);
-
-            if (resultMsg1.getCode() == 200) {
-
+        UserVO userVO1 = userService.toLogin(user);
+        if (userVO1.getUserId() != null) {
+                request.getSession().setAttribute("resultMsg1", userVO1);
                 resultMsg.setMsg("恭喜您 登录成功!!!");
-            }
+         }else {
+            resultMsg.setMsg("登陆失败");
+        }
 
         return resultMsg;
     }
     @RequestMapping("getImg")
     @ResponseBody
     public String getImg(HttpServletRequest request, HttpServletResponse response){
-
         return   Verification.getImg(request, response);
     }
     @RequestMapping("checkPhone")
@@ -90,7 +90,6 @@ public class LoginController {
         resultMsg1 = userService.register(user);
 
         if (resultMsg1.getCode() == 200) {
-
             resultMsg.setMsg("恭喜您 注册成功!!!");
         }
 

@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -24,7 +23,7 @@ public interface UserService {
      * @return
      */
     @RequestMapping(value="user/toUpdate",method = RequestMethod.POST)
-    String toUpdate(@RequestParam("userId")Integer userId);
+    UserVO toUpdate(@RequestParam("userId")Integer userId);
 
 
     /**
@@ -43,7 +42,7 @@ public interface UserService {
      * @return
      */
     @RequestMapping(value="site/add",method = RequestMethod.GET)
-    String add(@RequestBody SiteVO siteVO);
+    ResultMsg add(@RequestBody SiteVO siteVO);
 
 
 
@@ -60,7 +59,7 @@ public interface UserService {
 
     // 登录
     @RequestMapping(value="login/toLogin",method = RequestMethod.GET)
-    ResultMsg toLogin(@RequestParam("userVO") String userVO);
+    UserVO toLogin(@RequestParam("userVO") String userVO);
 
     @RequestMapping(value="login/checkPhone",method = RequestMethod.GET)
     ResultMsg checkPhone(@RequestBody UserVO userVO);

@@ -170,6 +170,11 @@ public class ReceptionController {
     public String usermy_head(){
         return URL_user+"my_head";
     }
+    //常用联系人
+    @RequestMapping("usermycontact")
+    public String usermycontact(){
+        return URL_user+"my_contact";
+    }
 
 
 

@@ -1,4 +1,4 @@
-package com.fy.receptionserver;
+package com.fy;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

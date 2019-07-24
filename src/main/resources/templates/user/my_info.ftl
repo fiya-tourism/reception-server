@@ -6,9 +6,9 @@
 			<!-----------------设置导航---------------->
 			<div id="set_nav">
 				<ul>
-					<li><a class="cur" href="my_info.html"><i class="ico1"></i>我的信息</a></li>
-					<li><a href="my_head.html"><i class="ico2"></i>我的头像</a></li>
-					<li><a href="my_contact.html"><i class="ico3"></i>常用联系人</a></li>
+					<li><a class="cur" href="javascript:usermy_info();"><i class="ico1"></i>我的信息</a></li>
+					<li><a href="javascript:usermy_head()"><i class="ico2"></i>我的头像</a></li>
+					<li><a href="javascript:usermy_contact()"><i class="ico3"></i>常用联系人</a></li>
 					<li><a href="security.html"><i class="ico4"></i>修改密码</a></li>
 				</ul>
 			</div>
@@ -19,9 +19,9 @@
 			<!-----------------我的信息---------------->
 			<div id="set_box">
 				<div class="title"><h2>我的信息</h2></div>
-			<form id="user-form">
-				<input type="hidden" name="userId">
+			<form id="userform">
 				<table class="table_list">
+                    <input type="hidden" name="userId" id="userId">
 					<tr>
 						<th>昵称：</th>
 						<td><input type="text" name="userName" id="name"/></td>
@@ -54,7 +54,7 @@
 						<td><textarea name="userSignature" id="userSignature">Dream of starting！</textarea></td>
 					</tr>
 				</table>
-					<div class="operation"><input type="submit" onclick="save()" value="保存" /></div>
+					<div class="operation"><input type="button" onclick="save()" value="保存" /></div>
             </form>
 			</div>
 		</div>	
@@ -68,9 +68,11 @@
     $.ajax({
         url:'/user/toUpdate',
         type:'get',
-        data:{"userId":1},
+        data:{"userId":$("#userId").val()},
         dataType:'json',
         success:function(data){
+          /*  $("#userform").form("load",data);*/
+            $("#userId").val(data.userId);
             $("#name").val(data.userName);
             $("#phone").val(data.userPhone);
             $("#age").val(data.userAge);
@@ -94,6 +96,11 @@
         userSex = $("#sex1").val();
         userSex = $("#sex2").val();
         var userName = $("#name").val();
+        var userPhone = $("#phone").val();
+        var userAge = $("#age").val();
+        var userDwell = $("#dwell").val();
+        var userBir = $("#bir").val();
+        var userSignature = $("#userSignature").val();
         $.ajax({
             url:'/user/updateInfo',
             type:'post',
@@ -103,11 +110,13 @@
                 "userPhone":userPhone,
                 "userAge":userAge,
                 "userDwell":userDwell,
-                "userId":1
+                "userBir":userBir,
+                "userSignature":userSignature,
+                "userId":$("#userId").val()
             },
             dataType:'json',
             success:function(data){
-                if(data.code==200){
+                if(data=="修改成功"){
                     alert("修改成功");
                     window.location.reload();
                 }else{

@@ -6,9 +6,9 @@
             <!-----------------设置导航---------------->
             <div id="set_nav">
                 <ul>
-                    <li><a href="my_info.html"><i class="ico1"></i>我的信息</a></li>
-                    <li><a href="my_head.html"><i class="ico2"></i>我的头像</a></li>
-                    <li><a class="cur" href="my_contact.html"><i class="ico3"></i>常用联系人</a></li>
+                    <li><a class="cur" href="javascript:usermy_info();"><i class="ico1"></i>我的信息</a></li>
+                    <li><a href="javascript:usermy_head()"><i class="ico2"></i>我的头像</a></li>
+                    <li><a href="javascript:usermy_contact()"><i class="ico3"></i>常用联系人</a></li>
                     <li><a href="security.html"><i class="ico4"></i>修改密码</a></li>
                 </ul>
             </div>
@@ -23,7 +23,7 @@
                     <table class="table_list" >
                         <tr>
                             <th>联系人：</th>
-                            <td><input  type="text"  name="userName" id="name"/></td>
+                            <td><input  type="text"  name="siteName" id="name"/></td>
                         </tr>
                         <tr>
                             <th>所在地区：</th>
@@ -58,7 +58,7 @@
                 </form>
                 <!-----------------联系列表---------------->
 
-
+<#--
                 <div  id="platform">
                     <ul class="address">
 					<#list list as siteVOList>
@@ -93,67 +93,32 @@
                         </li>
 					</#list>
                     </ul>
-                </div>
+                </div>-->
             </div>
         </div>
         <div class="clear"></div>
     </div>
     <script>
 
-
-        function select() {
-            $.ajax({
-                url: "/site/querySiteList",
-                type: "get",
-                data:{"userId":1},
-                dataType: "html",
-                success: function (data) {
-                    $("#platform").html(data);
-                }
-            })
-        }
-
-
         /**
          *  添加地址信息
          */
         function save(){
-            var sitePhone = $("#phone").val();
-            var siteProvince = $("#province").val();
-            var siteCity = $("#city").val();
-            var siteCounty = $("#county").val();
-            var siteParticular = $("#particular").val();
-            var sitePhone = $("#phone").val();
-            var sitePostalcode = $("#postalcode").val();
-
             $.ajax({
                 url:'/site/add',
                 type:'post',
-                data:{
-                    "siteName":$("#name").val(),
-                    "siteProvince":$("#province").val(),
-                    "siteCity":$("#city").val(),
-                    "siteCounty":$("#county").val(),
-                    "siteParticular":$("#particular").val(),
-                    "sitePhone":$("#phone").val(),
-                    "sitePostalcode":$("#postalcode").val(),
-                    "userId":1
-                },
+                data:$("#site_from").serialize(),
                 dataType:'json',
                 success:function(data){
                     if(data.code==200){
                         alert("新增成功");
-                        coutact();
                     }else{
                         alert(data.msg);
                     }
                 }
             })
         }
-
     </script>
-
-    <script type="text/javascript" src="/js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="/js/distpicker.data.js"></script>
     <script type="text/javascript" src="/js/distpicker.js"></script>
     <script type="text/javascript" src="/js/main.js"></script>

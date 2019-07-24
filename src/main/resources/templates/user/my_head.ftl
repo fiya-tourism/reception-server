@@ -6,10 +6,10 @@
 			<!-----------------设置导航---------------->
 			<div id="set_nav">
 				<ul>
-					<li><a href="my_info.html"><i class="ico1"></i>我的信息</a></li>
-					<li><a class="cur" href="my_head.html"><i class="ico2"></i>我的头像</a></li>
-					<li><a href="my_contact.html"><i class="ico3"></i>常用联系人</a></li>
-					<li><a href="security.html"><i class="ico4"></i>修改密码</a></li>
+                    <li><a class="cur" href="javascript:usermy_info();"><i class="ico1"></i>我的信息</a></li>
+                    <li><a href="javascript:usermy_head()"><i class="ico2"></i>我的头像</a></li>
+                    <li><a href="javascript:usermy_contact()"><i class="ico3"></i>常用联系人</a></li>
+                    <li><a href="security.html"><i class="ico4"></i>修改密码</a></li>
 				</ul>
 			</div>
 		</div>	
