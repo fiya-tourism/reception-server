@@ -18,6 +18,7 @@
                 <div id="vertical" class="bigImg">
                 <#list itemReShow.itemPictureList as item>
                     <img src="http://localhost:8011${item.pictureUrl}" id="midimg" />
+                    <input type="hiden" name="itemPath" value="http://localhost:8011${item.pictureUrl}"/>
                     <div style="display:none;" id="winSelector"></div>
                     <#if item.pictureSequence==1></#if>
                     <#break/>
@@ -39,11 +40,13 @@
             <!-----------------内容信息---------------->
             <div class="cont_info">
                 <div class="name"><h2>${itemReShow.itemName!}</h2></div>
+                <input type="hidden" name="itemName" value="${itemReShow.itemName!}"/>
                 <!-------------商品属性（价位数量）---------------->
                 <div class="p_number">
                     <div class="unit_price">
                         <ul>
                             <li class="fl">商品单价：<strong id="price_item_1">￥${itemReShow.iskuSalePrice}</strong></li>
+                            <input type="hidden" name="itemPrice" value="${itemReShow.iskuSalePrice}"/>
                             <li class="fr">已成交：3笔</li>
                             <div class="clear"></div>
                         </ul>
@@ -71,18 +74,6 @@
                             </li>
                             <#break/>
                         </#list>
-
-                        <#--<li>
-                            <span>颜色</span>
-                            <em class="yListrclickem">深灰色<i></i></em>
-                            <em>金色<i></i></em>
-                            <em>银色<i></i></em>
-                        </li>
-                        <li>
-                            <span>尺寸</span>
-                            <em class="yListrclickem">港版（二网）<i></i></em>
-                            <em>类型<i></i></em>
-                        </li>-->
                         </ul>
                     </div>
                     <!-------------数量增减变动价格（产品页）-------------->
@@ -101,7 +92,7 @@
                             <li><span class="jifen">购买商品可获得：<b id="total_points">18</b>积分</span></li>
                             <li><a class="go_buy" href="javascript:buy()">立即购买</a><a class="car_buy" href="shop_car.html">加入购物车</a></li>
                             <li>运费：<span class="tp_bg">卖家承担运费</span></li>
-                            <li>提醒：<span class="tp_bg">此商品为鲜活易腐类，不支持7天无理由退货</span></li>
+                            <li>提醒：<span class="tp_bg">${itemReShow.itemTitle!}</span></li>
                         </ul>
                     </div>
                 </div>
@@ -123,8 +114,7 @@
             </div>
             <!------------------特产详情-------------------->
             <div id="project_details">
-            ${itemReShow.itemIntroduceValue!}
-                <img alt="" src="/images/p1.jpg"/>
+                 ${itemReShow.itemIntroduceValue!}
             </div>
         </div>
         <!------------------公共盒子-------------------->
@@ -251,102 +241,6 @@
                         </div>
                         <div class="clear"></div>
                     </li>
-                    <li>
-                        <div class="pic"><a href="#"><img class="scale-effect" src="/images/t3.jpg"/></a></div>
-                        <div class="con">
-                            <a href="#">西秘鲁红提500g 葡萄 新鲜水果</a>
-                            <p>￥<label>330</label></p>
-                        </div>
-                        <div class="clear"></div>
-                    </li>
-                    <li>
-                        <div class="pic"><a href="#"><img class="scale-effect" src="/images/t2.jpg"/></a></div>
-                        <div class="con">
-                            <a href="#">西秘鲁红提500g 葡萄 新鲜水果西秘鲁红提500g 葡萄 新鲜水果</a>
-                            <p>￥<label>330</label></p>
-                        </div>
-                        <div class="clear"></div>
-                    </li>
-                    <li>
-                        <div class="pic"><a href="#"><img class="scale-effect" src="/images/t3.jpg"/></a></div>
-                        <div class="con">
-                            <a href="#">西秘鲁红提500g 葡萄 新鲜水果</a>
-                            <p>￥<label>330</label></p>
-                        </div>
-                        <div class="clear"></div>
-                    </li>
-                    <li>
-                        <div class="pic"><a href="#"><img class="scale-effect" src="/images/t4.jpg"/></a></div>
-                        <div class="con">
-                            <a href="#">西秘鲁红提500g 葡萄 新鲜水果</a>
-                            <p>￥<label>330</label></p>
-                        </div>
-                        <div class="clear"></div>
-                    </li>
-                    <li>
-                        <div class="pic"><a href="#"><img class="scale-effect" src="/images/t5.jpg"/></a></div>
-                        <div class="con">
-                            <a href="#">西秘鲁红提500g 葡萄 新鲜水果</a>
-                            <p>￥<label>330</label></p>
-                        </div>
-                        <div class="clear"></div>
-                    </li>
-                    <li>
-                        <div class="pic"><a href="#"><img class="scale-effect" src="/images/t2.jpg"/></a></div>
-                        <div class="con">
-                            <a href="#">西秘鲁红提500g 葡萄 新鲜水果</a>
-                            <p>￥<label>330</label></p>
-                        </div>
-                        <div class="clear"></div>
-                    </li>
-                    <li>
-                        <div class="pic"><a href="#"><img class="scale-effect" src="/images/t3.jpg"/></a></div>
-                        <div class="con">
-                            <a href="#">西秘鲁红提500g 葡萄 新鲜水果</a>
-                            <p>￥<label>330</label></p>
-                        </div>
-                        <div class="clear"></div>
-                    </li>
-                    <li>
-                        <div class="pic"><a href="#"><img class="scale-effect" src="/images/t2.jpg"/></a></div>
-                        <div class="con">
-                            <a href="#">西秘鲁红提500g 葡萄 新鲜水果西秘鲁红提500g 葡萄 新鲜水果</a>
-                            <p>￥<label>330</label></p>
-                        </div>
-                        <div class="clear"></div>
-                    </li>
-                    <li>
-                        <div class="pic"><a href="#"><img class="scale-effect" src="/images/t3.jpg"/></a></div>
-                        <div class="con">
-                            <a href="#">西秘鲁红提500g 葡萄 新鲜水果</a>
-                            <p>￥<label>330</label></p>
-                        </div>
-                        <div class="clear"></div>
-                    </li>
-                    <li>
-                        <div class="pic"><a href="#"><img class="scale-effect" src="/images/t4.jpg"/></a></div>
-                        <div class="con">
-                            <a href="#">西秘鲁红提500g 葡萄 新鲜水果</a>
-                            <p>￥<label>330</label></p>
-                        </div>
-                        <div class="clear"></div>
-                    </li>
-                    <li>
-                        <div class="pic"><a href="#"><img class="scale-effect" src="/images/t5.jpg"/></a></div>
-                        <div class="con">
-                            <a href="#">西秘鲁红提500g 葡萄 新鲜水果</a>
-                            <p>￥<label>330</label></p>
-                        </div>
-                        <div class="clear"></div>
-                    </li>
-                    <li>
-                        <div class="pic"><a href="#"><img class="scale-effect" src="/images/t2.jpg"/></a></div>
-                        <div class="con">
-                            <a href="#">西秘鲁红提500g 葡萄 新鲜水果</a>
-                            <p>￥<label>330</label></p>
-                        </div>
-                        <div class="clear"></div>
-                    </li>
                     <div class="clear"></div>
                 </ul>
             </div>
@@ -354,6 +248,33 @@
     </div>
     <div class="clear"></div>
 </div>
+
+<script>
+    //点击购买
+    function buy(){
+        var itemPath = $("input[name='itemPath']").val();
+        var itemName = $("input[name='itemName']").val();
+        var itemPrice = $("input[name='itemPrice']").val().replace(",","");
+        var itemCount = $("#qty_item_1").val();
+        var itemAllPrice = itemPrice*itemCount;
+        $.ajax({
+            url:'/item/commitOrder',
+            type:'post',
+            data:{
+                'itemPath':itemPath,
+                'itemName':itemName,
+                'itemPrice':itemPrice,
+                'itemCount':itemCount,
+                'itemAllPrice':itemAllPrice
+            },
+            dataType:'html',
+            success:function(data){
+                $("html").html(data);
+            }
+        });
+    }
+</script>
+
 <!-----------------产品主图特效---------------->
 <script type="text/javascript">
     $(document).ready(function(){
@@ -510,35 +431,5 @@
 
     });
 
-    //点击购买
-    function buy(){
-        location.href="/item/toOrder";
-    }
-
-</script>
-<#--富文本编辑器-->
-<script type="text/javascript" src="/commons/wangEditor.min.js"></script>
-<script type="text/javascript">
-    var $text2 = $('#text2')
-    console.info($text2)
-    var E = window.wangEditor
-    var editor = new E('#div2')
-    editor.customConfig.onchange = function (html) {
-        // 监控变化，同步更新到 textarea
-        $text2.val(html)
-    }
-    editor.create();
-    $.ajax({
-        url:'/itemFeigh/getItem?itemId='+row.itemId,
-        type:'get',
-        async:false,
-        dataType:'json',
-        success:function(obj){
-            //给编辑器回显信息
-            editor.txt.html(obj.itemIntroduceValue);
-        }
-    })
-    // 初始化 textarea 的值
-    $text2.val(editor.txt.html())
 
 </script>

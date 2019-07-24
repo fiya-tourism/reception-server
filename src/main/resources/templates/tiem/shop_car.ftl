@@ -75,23 +75,23 @@
 								<input type="checkbox" id="checkbox_a5" class="chk_1"> 
 								<label for="checkbox_a5"></label>
 							</label>
-							<div class="pic"><a href="#"><img width=53 height=53 src="/images/t3.jpg" /></a></div>
+							<div class="pic"><a href="#"><img width=53 height=53 src="${commitOrder.itemPath}" /></a></div>
 							<div class="name">
-								<a href="#">孟津特供奶葡萄三斤</a>
+								<a href="#">${commitOrder.itemName}</a>
 								<p>下单日期：2017-03-06</p>
 							</div>
 							<div class="clear"></div>
 						</div>
-						<div class="price" style="width:15%;"><label>￥80.9</label></div>
+						<div class="price" style="width:15%;"><label>￥${commitOrder.itemPrice}</label></div>
 						<div class="number" style="width:20%;">
 							<div class="Spinner">
 								<a class="DisDe" href="javascript:void(0)"><i>-</i></a>
-								<input class="Amount" value="1" autocomplete="off" maxlength="3">
+								<input class="Amount" value="${commitOrder.itemCount}" autocomplete="off" maxlength="3">
 								<a class="Increase" href="javascript:void(0)"><i>+</i></a>
 							</div>
 						</div>
 						
-						<div class="price" style="width:15%;"><span>￥80.9</span></div>
+						<div class="price" style="width:15%;"><span>￥${commitOrder.itemAllPrice}</span></div>
 						
 						<div class="operation" style="width:15%;">
 							<a class="evaluation" href="#">删除</a>

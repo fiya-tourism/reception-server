@@ -1,5 +1,6 @@
 package com.fy.receptionserver.item.controller;
 
+import com.fy.receptionserver.item.domain.CommitOrder;
 import com.fy.receptionserver.item.domain.DataGrid;
 import com.fy.receptionserver.item.domain.ItemReShow;
 import com.fy.receptionserver.item.domain.ItemSpu;
@@ -60,6 +61,17 @@ public class ItemController {
         ModelAndView mav = new ModelAndView("tiem/project");
         ItemReShow itemReShow = itemServiceFeign.getItemById(itemId);
         mav.addObject("itemReShow",itemReShow);
+        return mav;
+    }
+
+    /**
+     * 根据id获取item
+     * @return
+     */
+    @RequestMapping("commitOrder")
+    public ModelAndView commitOrder(CommitOrder commitOrder){
+        ModelAndView mav = new ModelAndView("tiem/shop_car");
+        mav.addObject("commitOrder",commitOrder);
         return mav;
     }
 
