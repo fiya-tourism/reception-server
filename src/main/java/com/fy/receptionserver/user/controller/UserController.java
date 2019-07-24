@@ -1,12 +1,16 @@
 package com.fy.receptionserver.user.controller;
 
+import com.fy.receptionserver.commons.ResultMsg;
 import com.fy.receptionserver.user.domain.UserVO;
 import com.fy.receptionserver.user.service.UserService;
+import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
+
+import javax.servlet.http.HttpServletRequest;
+import java.lang.reflect.Array;
 
 /**
  * @author 武豫
@@ -26,7 +30,9 @@ public class UserController {
      */
     @RequestMapping("toUpdate")
     @ResponseBody
-    public String toUpdate(Integer userId){
+    public UserVO toUpdate(HttpServletRequest request,Integer userId){
+        UserVO resultMsg1 = (UserVO) request.getSession().getAttribute("resultMsg1");
+        userId =  resultMsg1.getUserId();
         return userService.toUpdate(userId);
     }
 
@@ -37,9 +43,8 @@ public class UserController {
      */
     @RequestMapping("updateInfo")
     @ResponseBody
-    public String updateInfo(UserVO userVO){
+    public String updateInfo(HttpServletRequest request,UserVO userVO){
+        request.getSession().getAttribute("resultMsg1");
         return userService.updateInfo(userVO);
     }
-
-
 }

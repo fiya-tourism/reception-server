@@ -74,7 +74,7 @@
         var userPassword = $("#password").val();
         var codeImg = $("#code").val();
         //正则验证手机号
-        var phone = /^1\d{10}$/
+        var phone = /^1\d{10}$/;
         var bool = phone.test(userPhone);
         if(!bool){
             $("#phoneSpan").html("<font color='red'>手机号格式错误</font>");

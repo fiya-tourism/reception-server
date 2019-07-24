@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="/css/amazeui.css">
     <!------------核心样式-------------->
     <link rel="stylesheet" type="text/css" href="/css/user.css">
+
 </head>
 <body>
 
@@ -332,6 +333,21 @@
             }
         })
     }
+    //常用联系人
+    function usermy_contact() {
+        $("#my_index").empty();
+
+        $.ajax({
+            type:"GET",
+            url:"/reception/usermycontact",
+            async:false,
+            dataType:"html",
+            success:function (data) {
+                $("#my_index").html(data);
+            }
+        })
+    }
+
 </script>
 </body>
 </html>

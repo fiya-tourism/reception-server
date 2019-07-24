@@ -1,6 +1,8 @@
 package com.fy.receptionserver.site.controller;
 
+import com.fy.receptionserver.commons.ResultMsg;
 import com.fy.receptionserver.site.domain.SiteVO;
+import com.fy.receptionserver.user.domain.UserVO;
 import com.fy.receptionserver.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -8,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -29,8 +32,11 @@ public class SiteController {
      */
     @RequestMapping("add")
     @ResponseBody
-    public String add(SiteVO siteVO){
-       return userService.add(siteVO);
+    public ResultMsg add(HttpServletRequest request, SiteVO siteVO){
+        UserVO resultMsg1 = (UserVO) request.getSession().getAttribute("resultMsg1");
+        siteVO.setUserId(resultMsg1.getUserId());
+        return userService.add(siteVO);
+
     }
 
     /**
