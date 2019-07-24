@@ -63,14 +63,14 @@
                 <li>
                     <div class="con">
                         <div class="info" style="width:35%;">
-                            <div class="pic"><a href="#"><img width=53 height=53 src="/images/2c90cca2458c651b01458c95cc0b000c.jpg" /></a></div>
+                            <div class="pic"><a href="#"><img width=53 height=53 src="${spots.pictureUrl}" /></a></div>
                             <div class="name">
-                                <a href="#">千唐志斋门票</a>
-                                <p>下单日期：2017-03-06</p>
+                                <a href="#">${spots.spotsName}门票</a>
+                                <p>下单日期：<div id="date"></div></p>
                             </div>
                             <div class="clear"></div>
                         </div>
-                        <div class="price" style="width:15%;"><label>￥80.9</label></div>
+                        <div class="price" style="width:15%;"><label>￥${spots.spotsPrice}</label></div>
                         <div class="number" style="width:30%;">
                             <div class="Spinner">
                                 <a class="DisDe" href="javascript:orderInserDtelete()"><i>-</i></a>
@@ -80,7 +80,7 @@
                             </div>
                         </div>
 
-                        <div class="price" style="width:20%;"><span>￥80.9</span></div>
+                        <div class="price" style="width:20%;"><span>￥${spots.spotsPrice}</span></div>
                         <div class="clear"></div>
                     </div>
                 </li>
@@ -94,31 +94,31 @@
                     <th colspan="2">景区信息</th>
                 </tr>
                 <tr>
-                    <td>景区名称：千唐志斋</td>
-                    <td>联系方式：0379-65517799</td>
+                    <td>景区名称:${spots.spotsName}</td>
+                    <td>联系方式：${spots.spotsPhone}</td>
                 </tr>
                 <tr>
                     <td>开放时间：全年</td>
-                    <td>详细地址：洛阳市孟津县马屯镇</td>
+                    <td>详细地址：${spots.spotsAddress}</td>
                 </tr>
             </table>
         </div>
         <!-----------------活动信息---------------->
-        <div class="info_mo">
-            <table>
-                <tr>
-                    <th colspan="2">活动信息</th>
-                </tr>
-                <tr>
-                    <td>活动：春节逛吃哪里去？看洛阳庙会、灯展集锦</td>
-                    <td>活动咨询：0379-63789053</td>
-                </tr>
-                <tr>
-                    <td>出发时间：2017/01/23</td>
-                    <td>集合地点：洛阳市关林庙会</td>
-                </tr>
-            </table>
-        </div>
+        <#--<div class="info_mo">-->
+            <#--<table>-->
+                <#--<tr>-->
+                    <#--<th colspan="2">活动信息</th>-->
+                <#--</tr>-->
+                <#--<tr>-->
+                    <#--<td>活动：春节逛吃哪里去？看洛阳庙会、灯展集锦</td>-->
+                    <#--<td>活动咨询：0379-63789053</td>-->
+                <#--</tr>-->
+                <#--<tr>-->
+                    <#--<td>出发时间：2017/01/23</td>-->
+                    <#--<td>集合地点：洛阳市关林庙会</td>-->
+                <#--</tr>-->
+            <#--</table>-->
+        <#--</div>-->
         <div class="contact">
             <ul>
                 <li class="title">
@@ -132,24 +132,15 @@
                                       class="am-close">&times;</span>
                             </div>
                             <div class="am-popup-bd">
+                                <#list spots.userVO as user>
                                 <ul>
-                                    <li><i class="am-icon-user"></i><span class="name">张飞</span>17670362580
+                                    <li><i class="am-icon-user"></i><span class="name">${()!""}</span>17670362580
                                         <label class="am-radio-inline">
                                             <input type="radio" name="radio3" value="" data-am-ucheck>
                                         </label>
                                     </li>
-                                    <li><i class="am-icon-user"></i><span class="name">张飞</span>17670362580
-                                        <label class="am-radio-inline">
-                                            <input type="radio" name="radio3" value="" data-am-ucheck>
-                                        </label>
-                                    </li>
-                                    <li><i class="am-icon-user"></i><span class="name">张飞</span>17670362580
-                                        <label class="am-radio-inline">
-                                            <input type="radio" name="radio3" value="" data-am-ucheck>
-                                        </label>
-                                    </li>
-
                                 </ul>
+                                </#list>
                                 <input class="submit" type="submit" value="确定"/>
                             </div>
                         </div>
@@ -192,7 +183,7 @@
 
 
         <div class="calculation">
-            <a href="javascript:toOrder()">提交订单</a>
+            <a href="javascript:toOrder(${spots.spotsId})">提交订单</a>
             <span>合计（含运费0.00元）： <b>￥0.00</b></span>
 
         </div>
@@ -209,17 +200,19 @@
         var order2=null;
         var cou =0;
 
+        $("#date").val(new Date());
+
         function orderchange() {
             order2=$("#orderUpdate").val();
             if(order<1||order2<1||order==null||order2==null){
-                $("#orderUpdate").attr({"value":1})
+                $("#orderUpdate").attr({"value":1});
                 $("#orderspan").html("<span id='orderspan'></span>");
                 ++cou;
             }else if (order>100||order2>100){
-                $("#orderUpdate").attr({"value":1})
+                $("#orderUpdate").attr({"value":1});
                 alert("库存不足,请从新选择数量")
             }else {
-                $("#orderUpdate").attr({"value":order2})
+                $("#orderUpdate").attr({"value":order2});
                 $("#orderspan").html("<span id='orderspan'></span>");
                 ++cou;
             }
@@ -267,8 +260,8 @@
         }
 
         //去确认订单页面
-        function toOrder() {
-            location.href="/reception/scenicordersubmit";
+        function toOrder(strId) {
+            location.href="/spotcontroller/spotById?Id="+strId+"&"+"ordersubmit="+2;
         }
     </script>
 </body>

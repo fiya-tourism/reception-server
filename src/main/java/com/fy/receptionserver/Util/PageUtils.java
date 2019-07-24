@@ -10,7 +10,7 @@ public class PageUtils {
 	/** 当前页 */
 	private int page = 1;
 	/** 每页条数 */
-	private int rows = 3;
+	private int rows = 10;
 	/** 开始条数的下标 */
 	private int startPos;
 

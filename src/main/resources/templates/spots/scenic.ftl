@@ -1,8 +1,8 @@
 
 <!------------------景区版头-------------------->
-<div id="scenic_head" style="background:url(/images/2c90cca2458c651b01458c95cc0b000c.jpg) no-repeat center;background-size:100%;">
+<div id="scenic_head" style="background:url(${spots.pictureUrl}) no-repeat center;background-size:100%;">
 	<div class="cw1200">
-		<div class="title"><p>千唐志斋</p></div>
+		<div class="title"><p>${spots.spotsName}</p></div>
 		<a href="#" class="view_gallery" id="botn">查看图库<i class="am-icon-chevron-circle-right"></i></a>
 		
 		<ul style="display:none;" data-am-widget="gallery" class="am-gallery am-avg-sm-2 am-avg-md-3 am-avg-lg-4 am-gallery-default" data-am-gallery="{ pureview: true }" >
@@ -178,7 +178,7 @@
 						<li>景点地址：<span>${spots.spotsAddress}</span></li>
 						<li>费用：<label>￥${spots.spotsPrice}</label></li>
 					</ul>
-					<a class="buy" href="submit_orders.html">立即预订</a>
+					<a class="buy" href="javascript:submitfunction(${spots.spotsId})">立即预订</a>
 				</div>
 			</div>
 			<!------------------公共盒子-------------------->
@@ -273,3 +273,17 @@
 		<div class="clear"></div>
     </div>
 </div>
+<script>
+	function submitfunction(strId) {
+		location.href="/spotcontroller/spotById?Id="+strId+"&"+"ordersubmit="+1;
+		// $.ajax({
+		// 	type:"GET",
+		// 	url:"/spotcontroller/spotById",
+		// 	data:{"Id":strId,"ordersubmit":1},
+		// 	success:function (){
+		//
+		// 	}
+		//
+		// })
+    }
+</script>

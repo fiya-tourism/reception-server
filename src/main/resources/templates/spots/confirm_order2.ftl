@@ -63,8 +63,8 @@
 					<th class="cwt">总价</th>
 				</tr>
 				<tr>
-					<td><a href="#"><img class="pic" width=53 height=53 src="/images/2c90cca2458c651b01458c95cc0b000c.jpg" />千唐志斋门票</a></td>
-					<td class="cwt">￥80.9</td>
+					<td><a href="#"><img class="pic" width=53 height=53 src="${spots.pictureUrl}" />${spots.spotsName}</a></td>
+					<td class="cwt">￥${spots.spotsPrice}</td>
 					<td class="cwt">x3</td>
 					<td class="cwt">￥242</td>
 				</tr>
@@ -77,31 +77,31 @@
 					<th colspan="2">景区信息</th>
 				</tr>
 				<tr>
-					<td>景区名称：千唐志斋</td>
-					<td>联系方式：0379-65517799</td>
+					<td>景区名称：${spots.spotsName}</td>
+					<td>联系方式：${spots.spotsPhone}</td>
 				</tr>
 				<tr>
 					<td>开放时间：全年</td>
-					<td>详细地址：洛阳市孟津县马屯镇</td>
+					<td>详细地址：${spots.spotsAddress}</td>
 				</tr>
 			</table>
 		</div>
 		<!-----------------活动信息---------------->
-		<div class="info_mo">
-			<table>
-				<tr>
-					<th colspan="2">活动信息</th>
-				</tr>
-				<tr>
-					<td>活动：春节逛吃哪里去？看洛阳庙会、灯展集锦</td>
-					<td>活动咨询：0379-63789053</td>
-				</tr>
-				<tr>
-					<td>出发时间：2017/01/23</td>
-					<td>集合地点：洛阳市关林庙会</td>
-				</tr>
-			</table>
-		</div>
+		<#--<div class="info_mo">-->
+			<#--<table>-->
+				<#--<tr>-->
+					<#--<th colspan="2">活动信息</th>-->
+				<#--</tr>-->
+				<#--<tr>-->
+					<#--<td>活动：春节逛吃哪里去？看洛阳庙会、灯展集锦</td>-->
+					<#--<td>活动咨询：${spots.spotsPhone}</td>-->
+				<#--</tr>-->
+				<#--<tr>-->
+					<#--<td>出发时间：${spots.spotsOpenTime}</td>-->
+					<#--<td>集合地点：${spots.spotsVenue}</td>-->
+				<#--</tr>-->
+			<#--</table>-->
+		<#--</div>-->
 		<!-----------------景区信息---------------->
 		<div class="info_mo">
 			<table>

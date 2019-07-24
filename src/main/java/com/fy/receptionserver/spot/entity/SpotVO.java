@@ -1,15 +1,22 @@
 package com.fy.receptionserver.spot.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import java.io.Serializable;
+import com.fy.receptionserver.user.domain.UserVO;
 import java.util.Date;
 import org.springframework.format.annotation.DateTimeFormat;
 
 /**
- * @author 彭志新
+ * @ProjectName: reception-server
+ * @Package: com.fy.receptionserver.spot.entity
+ * @ClassName: SpotVO
+ * @Author: 彭志新
+ * @Description: 图片集合
+ * @Date: 2019/7/22 11:17
+ * @Version: 1.0
  */
-public class Spots implements Serializable {
+public class SpotVO {
 
+    private UserVO userVO;
     //旅游主键
     private Integer spotsId;
     //员工外键
@@ -40,6 +47,9 @@ public class Spots implements Serializable {
     private String spotsActivity;
     //集合地点
     private String spotsVenue;
+    //图片路径
+    private String pictureUrl;
+
     //景区状态  1 上架/0 未上架
     // private Integer spotsGrounding;
     //出发时间
@@ -61,6 +71,13 @@ public class Spots implements Serializable {
     //状态
     private Integer spotsYn;
 
+    public UserVO getUserVO() {
+        return userVO;
+    }
+
+    public void setUserVO(UserVO userVO) {
+        this.userVO = userVO;
+    }
 
     public Integer getSpotsId() {
         return spotsId;
@@ -174,6 +191,14 @@ public class Spots implements Serializable {
         this.spotsVenue = spotsVenue;
     }
 
+    public String getPictureUrl() {
+        return pictureUrl;
+    }
+
+    public void setPictureUrl(String pictureUrl) {
+        this.pictureUrl = pictureUrl;
+    }
+
     public Date getSpotsGotime() {
         return spotsGotime;
     }
@@ -216,7 +241,7 @@ public class Spots implements Serializable {
 
     @Override
     public String toString() {
-        return "Spots{" +
+        return "SpotVO{" +
                 "spotsId=" + spotsId +
                 ", staffId=" + staffId +
                 ", spotsName='" + spotsName + '\'' +
@@ -231,6 +256,7 @@ public class Spots implements Serializable {
                 ", spotsRepertory=" + spotsRepertory +
                 ", spotsActivity='" + spotsActivity + '\'' +
                 ", spotsVenue='" + spotsVenue + '\'' +
+                ", pictureUrl='" + pictureUrl + '\'' +
                 ", spotsGotime=" + spotsGotime +
                 ", spotsRelease=" + spotsRelease +
                 ", spotsCreate=" + spotsCreate +
