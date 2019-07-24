@@ -17,8 +17,8 @@
             <div class="preview">
                 <div id="vertical" class="bigImg">
                 <#list itemReShow.itemPictureList as item>
-                    <img src="http://localhost:8011${item.pictureUrl}" id="midimg" />
-                    <input type="hiden" name="itemPath" value="http://localhost:8011${item.pictureUrl}"/>
+                    <img src="http://localhost:8011${item.pictureUrl!}" id="midimg" />
+                    <input type="hiden" name="itemPath" value="http://localhost:8011${item.pictureUrl!}"/>
                     <div style="display:none;" id="winSelector"></div>
                     <#if item.pictureSequence==1></#if>
                     <#break/>
@@ -28,9 +28,9 @@
                     <ul>
                     <#list itemReShow.itemPictureList as item>
                         <#if item.pictureSequence==1>
-                            <li id="onlickImg"><img src="http://localhost:8011${item.pictureUrl}"/></li>
+                            <li id="onlickImg"><img src="http://localhost:8011${item.pictureUrl!}"/></li>
                         <#else>
-                            <li><img src="http://localhost:8011${item.pictureUrl}"/></li>
+                            <li><img src="http://localhost:8011${item.pictureUrl!}"/></li>
                         </#if>
                     </#list>
                     </ul>
